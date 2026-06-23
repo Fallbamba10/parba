@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParBa</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0.6rem 2rem;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+            color: #fff;
+            background-color: rgb(7, 64, 80);
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+        }
+        li a {
+            text-decoration: none;
+            color: inherit;
+        }
+        h2 {
+            color: rgb(7, 64, 80);
+        }
+        nav h2 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        .div2, .div3 {
+            color: rgb(7, 64, 80);
+        }
+        ol {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        .div2 a {
+            color: rgb(7, 64, 80);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .first {
+            background: #f0f8fb;
+            padding: 3.5rem 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .first-top {
+            display: flex;
+            align-items: center;
+        }
+        .first-gauche { flex: 1; }
+        .f-f {
+            font-size: 1rem;
+            color: #333;
+            margin: 0 0 0.4rem 0;
+        }
+        .f-titre {
+            font-size: 3.4rem;
+            font-weight: bold;
+            color: #074050;
+            margin: 0 0 0.5rem 0;
+        }
+        .f-desc {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.6;
+            max-width: 260px;
+            margin: 0 0 1.2rem 0;
+        }
+        .f-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            padding-top: 2rem;
+        }
+        .btn-c {
+            background: #074050;
+            color: white;
+            border: 2px solid #074050;
+            padding: 0.6rem 1.3rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .btn-r {
+            background: transparent;
+            color: #074050;
+            border: 2px solid #074050;
+            padding: 0.6rem 1.3rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .first-droite {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .two {
+            padding: 3.5rem 4rem;
+            background: #074050;
+            color: white;
+        }
+        #p-two {
+            font-size: 3.4rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .two-p1 {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .two-p2{
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .three {
+            padding: 3.5rem 4rem;
+            text-align: center;
+        }
+        .barre {
+            width: 55px;
+            height: 4px;
+            background: #074050;
+            margin: 0 auto 0.9rem;
+            border-radius: 2px;
+        }
+        .bande-bleue {
+            background: #c4e5ee;
+            padding: 2.2rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 4px;
+        }
+        .four-h2 {
+            text-align: center;
+            color: #074050;
+        }
+        .five {
+            padding: 3.5rem 4rem;
+            text-align: center;
+        }
+        .five-b {
+            background: #074050;
+            padding: 2rem 3rem;
+            border-radius: 6px;
+            max-width: 560px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .field-group { margin-bottom: 1rem; }
+        .field-group label {
+            display: block;
+            color: white;
+            font-size: 0.82rem;
+            margin-bottom: 0.3rem;
+        }
+        .field-group input,
+        .field-group textarea {
+            width: 100%;
+            padding: 0.48rem 0.6rem;
+            border: none;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            outline: none;
+            background: white;
+        }
+        .field-group textarea {
+            height: 110px;
+            resize: none;
+        }
+        body {
+            margin: 0;
+            background: #f0f8fb;
+            font-family: sans-serif;
+        }
+        .btn-send {
+            background: white;
+            color: #074050;
+            border: none;
+            padding: 0.6rem 1.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.5rem;
+        }
+        .testimonials {
+            padding: 3.5rem 4rem;
+            text-align: center;
+        }
+        .testimonials-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .cards-wrapper { display: flex; gap: 2rem; }
+        .t-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 1.4rem;
+            width: 215px;
+            position: relative;
+            padding-top: 2.8rem;
+            margin-top: 2.8rem;
+            text-align: left;
+        }
+        .t-avatar {
+            position: absolute;
+            top: -2.6rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .t-name {
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 0.15rem;
+        }
+        .t-role {
+            text-align: center;
+            font-size: 0.76rem;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 0.8rem;
+        }
+        .t-text {
+            font-size: 0.76rem;
+            color: #555;
+            line-height: 1.55;
+        }
+         footer {
+            background: #111928;
+            color: #a8b4be;
+            padding: 2.5rem 4rem 0;
+        }
+        .footer-top {
+            display: flex;
+            gap: 5rem;
+            padding-bottom: 2rem;
+        }
+        .footer-col { flex: 1; }
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+        .footer-col p {
+            font-size: 0.76rem;
+            line-height: 1.7;
+        }
+        .social-row {
+            display: flex;
+            gap: 0.4rem;
+            margin-top: 1rem;
+        }
+        .soc {
+            width: 26px;
+            height: 26px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            font-weight: bold;
+            color: white;
+            text-transform: lowercase;
+        }
+        .soc-fb { background: #3b5998; }
+        .soc-ig { background: #e1306c; }
+        .soc-tw { background: #1da1f2; }
+        .soc-li { background: #0077b5; }
+        .footer-social-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            padding-top: 0.4rem;
+        }
+        .footer-bottom {
+            border-top: 1px solid #242c3a;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.72rem;
+            color: #5a6270;
+        }
+        .social-row-bottom {
+            display: flex;
+            gap: 0.4rem;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+
+    </style>
+</head>
+<body> 
+    <nav>
+        <h2>ParBa</h2>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Partenaire</a></li>
+                <li><a href="#">Témoignage</a></li>
+                <li><a href="#">Contact</a></li>
+                <!-- -->
+            </ul>
+            <div class="div2">
+                <ol>
+                    <li><a href="#">Connexion</a></li>
+                    <li><a href="#">Inscription</a></li>
+                </ol>
+            </div>
+    </nav>
+
+    <section class="first">
+        <div class="first-top">
+            <div class="first-gauche">
+                <p class="f-f">Votre assistante !</p>
+                <h1 class="f-titre">ParBa</h1>
+                <p class="f-desc">
+                    La gestion des remplacements<br> est devenue un enjeu structurant<br> pour les établissements<br> sanitaires et médico-sociaux.
+                </p>
+            </div>
+            <div class="first-droite">
+                <img src="Tech Life Remote Life.png" alt="logo">
+            </div>
+        </div>
+        <div class="f-btns">
+            <button class="btn-c">Commencer <img src="logo0.png" alt="" style="width:18px;height:18px;vertical-align:middle;filter:brightness(0) invert(1);"></button>
+            <button class="btn-r">Mon réseau &#8964;</button>
+        </div>
+    </section>
+
+    <section class="two">
+    <p id="p-two">ParBa</p>
+    <p class="two-p1">
+        La gestion des remplacements est devenue un enjeu structurant<br>
+        pour les établissements sanitaires et médico-sociaux.
+    </p>
+    <p class="two-p2">
+        Face a l'absentéisme et ou l'accroissement temporaire d'activité imprévisible dans le temps, la gestion des remplacements est devenue un enjeu structurant pour les établissements sanitaires et médico-sociaux. Les outils actuels sont chronophages et peu efficients. Parba propose une solution digitale simple et efficace, adaptée aux besoins de toutes les structures.
+        ParBa a ete pense pour resolutionner la gestion des resources humaines dans la sante. Cette solution de pilotage des absences et des remplacements de personnel, 100% en ligne permet aux etablissements sanitaires et medico-sociaux de gerer leur personnel(agents, salaries, vacataires).
+    </p>
+</section>
+
+<section class="three">
+    <div class="barre"></div>
+    <h2>Nos Partenaires</h2>
+    <div class="bande-bleue">
+    <div>&#10094;</div>
+
+        <div><img src="BOOSTER LOGO-2.png" alt=""></div>
+        <div><img src="BOOSTER LOGO.png" alt=""></div>
+        <div><img src="logo0.png" alt="" width="200" height="180"></div>
+
+        <div>&#10095;</div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2 class="section-title">Ils nous font confiance !</h2>
+    <div class="testimonials-row">
+        <div class="arrow-btn">&#8249;</div>
+        <div class="cards-wrapper">
+            <!-- Card Adams Smith -->
+            <div class="t-card">
+                <div class="t-avatar">
+                    <!-- <svg width="68" height="68" viewBox="0 0 68 68">
+                        <rect width="68" height="68" fill="#9ab0c0"/>
+                        <circle cx="34" cy="26" r="15" fill="#6e8898"/>
+                        <ellipse cx="34" cy="64" rx="22" ry="18" fill="#6e8898"/>
+                    </svg> -->
+                    <img src="Ellipse 1.png" alt="Avatar Adams Smith" width="68" height="68">
+                </div>
+                <p class="t-name">Adams Smith</p>
+                <p class="t-role">General manager</p>
+                <p class="t-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id in posuere id leo, auctor aliquam feugiat fermentum. Aliquam integer ullamcorper tortor ac quis tortor. Pulvinar nisl sed.</p>
+            </div>
+            <!-- Card Juliette Faye -->
+            <div class="t-card">
+                <div class="t-avatar">
+                    <img src="Ellipse 2.png" alt="Avatar Juliette Faye" width="68" height="68">
+                </div>
+                <p class="t-name">Juliette Faye</p>
+                <p class="t-role">Self Care</p>
+                <p class="t-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id in posuere id leo, auctor aliquam feugiat fermentum. Aliquam integer ullamcorper tortor ac quis tortor. Pulvinar nisl sed.</p>
+            </div>
+        </div>
+        <div class="arrow-btn">&#8250;</div>
+    </div>
+</section>
+
+<section class="five">
+    <div class="barre"></div>
+    <h2 class="five-titre">Contact</h2>
+    <div class="five-b">
+        <div class="field-group">
+            <label>Nom complet</label>
+            <input type="text"/>
+        </div>
+        <div class="field-group">
+            <label>Structure</label>
+            <input type="text"/>
+        </div>
+        <div class="field-group">
+            <label>Adresse mail</label>
+            <input type="email"/>
+        </div>
+        <div class="field-group">
+            <label>Message</label>
+            <textarea></textarea>
+        </div>
+        <!-- <button class="btn-send">Envoyer &#9658;</button> -->
+    </div>
+</section>
+
+<footer>
+    <div class="footer-top">
+        <div class="footer-col">
+            <h4>ParBa</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor est et ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor est et ultricies.</p>
+        </div>
+        <div class="footer-col">
+            <h4>A Propos</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod dignissim tortor nam tincidunt donec. Vulputate tortor nulla aliquam sed scelerisque. Nunc, diam vestibulum purus eu. Eu placerat vitae at.</p>
+        </div>
+        <div class="footer-social-col">
+            <div class="soc soc-fb">f</div>
+            <div class="soc soc-ig">&#9679;</div>
+            <div class="soc soc-tw">t</div>
+            <div class="soc soc-li">in</div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="social-row-bottom">
+            <div class="soc soc-fb">f</div>
+            <div class="soc soc-ig">&#9679;</div>
+            <div class="soc soc-tw">t</div>
+            <div class="soc soc-li">in</div>
+        </div>
+        COPYRIGHT 2021 | DEFAR Sci &ndash; Tout droit réservés
+    </div>
+</footer>
+</body>
+</html>
