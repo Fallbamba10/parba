@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ParBa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         nav {
             display: flex;
@@ -202,10 +203,12 @@
             font-size: 0.85rem;
             font-weight: bold;
             cursor: pointer;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             gap: 0.4rem;
             margin-top: 0.5rem;
+            width: 100%;
+            justify-content: center;
         }
         .testimonials {
             padding: 3.5rem 4rem;
@@ -303,7 +306,10 @@
             display: flex;
             flex-direction: column;
             gap: 0.4rem;
-            padding-top: 0.4rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+            align-self: flex-start;
         }
         .footer-bottom {
             border-top: 1px solid #242c3a;
@@ -316,7 +322,13 @@
             display: flex;
             gap: 0.4rem;
             justify-content: center;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            background: white;
+            border-radius: 6px;
+            padding: 0.5rem 0.8rem;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
         }
 
     </style>
@@ -354,7 +366,7 @@
             </div>
         </div>
         <div class="f-btns">
-            <button class="btn-c">Commencer <img src="logo0.png" alt="" style="width:18px;height:18px;vertical-align:middle;filter:brightness(0) invert(1);"></button>
+            <button class="btn-c">Commencer <i class="fa-solid fa-cloud-arrow-up"></i></button>
             <button class="btn-r">Mon réseau &#8964;</button>
         </div>
     </section>
@@ -438,7 +450,7 @@
             <label>Message</label>
             <textarea></textarea>
         </div>
-        <!-- <button class="btn-send">Envoyer &#9658;</button> -->
+        <button class="btn-send">Envoyer &#9658;</button>
     </div>
 </section>
 
@@ -466,7 +478,7 @@
             <div class="soc soc-tw">t</div>
             <div class="soc soc-li">in</div>
         </div>
-        COPYRIGHT 2021 | DEFAR Sci &ndash; Tout droit réservés
+        <div>COPYRIGHT 2021 | DEFAR Sci &ndash; Tout droit réservés</div>
     </div>
 </footer>
 </body>
