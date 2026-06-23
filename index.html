@@ -203,10 +203,12 @@
             font-size: 0.85rem;
             font-weight: bold;
             cursor: pointer;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             gap: 0.4rem;
             margin-top: 0.5rem;
+            width: 100%;
+            justify-content: center;
         }
         .testimonials {
             padding: 3.5rem 4rem;
@@ -317,13 +319,16 @@
             color: #5a6270;
         }
         .social-row-bottom {
-            display: inline-flex;
+            display: flex;
             gap: 0.4rem;
             justify-content: center;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             background: white;
             border-radius: 6px;
             padding: 0.5rem 0.8rem;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
         }
 
     </style>
@@ -361,7 +366,7 @@
             </div>
         </div>
         <div class="f-btns">
-            <button class="btn-c">Commencer <i class="fa-light fa-cloud-arrow-up"></i></button>
+            <button class="btn-c">Commencer <i class="fa-solid fa-cloud-arrow-up"></i></button>
             <button class="btn-r">Mon réseau &#8964;</button>
         </div>
     </section>
@@ -473,7 +478,7 @@
             <div class="soc soc-tw">t</div>
             <div class="soc soc-li">in</div>
         </div>
-        COPYRIGHT 2021 | DEFAR Sci &ndash; Tout droit réservés
+        <div>COPYRIGHT 2021 | DEFAR Sci &ndash; Tout droit réservés</div>
     </div>
 </footer>
 </body>
